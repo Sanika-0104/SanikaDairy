@@ -42,10 +42,6 @@ public class User {
 	Set<Role> roles = new HashSet<Role>();
 
 	
-	
-
-	
-	
 
 	public int getId() {
 		return id;
@@ -120,6 +116,5 @@ public class User {
 		this.ratePerLiter = ratePerLiter;
 	}
 	
-	
-	
+
 }

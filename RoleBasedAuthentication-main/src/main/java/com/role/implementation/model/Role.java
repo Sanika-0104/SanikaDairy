@@ -16,8 +16,6 @@ public class Role {
 	
 	private String role;
 	
-	
-
 	public int getId() {
 		return id;
 	}
@@ -34,6 +32,4 @@ public class Role {
 		this.role = role;
 	}
 
-	
-	
 }

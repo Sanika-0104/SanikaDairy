@@ -30,9 +30,6 @@ public class CustomSuccessHandler implements AuthenticationSuccessHandler {
 			} else if (grantedAuthority.getAuthority().equals("ADMIN")) {
 				redirectUrl = "/adminScreen";
 				break;
-			}else if (grantedAuthority.getAuthority().equals("ADMINO")) {
-				redirectUrl = "/adminScreen1";
-				break;
 			}
 			
 		}

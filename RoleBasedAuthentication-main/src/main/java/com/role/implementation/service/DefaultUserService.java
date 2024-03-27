@@ -13,5 +13,6 @@ public interface DefaultUserService extends UserDetailsService{
 
 	User save(UserRegisteredDTO userRegisteredDTO);
 	List<User> getUsersByRole(int  role);
-
+	User getUserByEmail(String email);
+	void updateUser(User user); 
 }

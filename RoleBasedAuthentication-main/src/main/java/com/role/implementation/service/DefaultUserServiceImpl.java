@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.role.implementation.DTO.FarmerDetailsDTO;
 import com.role.implementation.DTO.UserRegisteredDTO;
 import com.role.implementation.model.Role;
 import com.role.implementation.model.User;
@@ -64,7 +65,15 @@ public class DefaultUserServiceImpl implements DefaultUserService{
 		user.setMobileNo(userRegisteredDTO.getMobile_no());
 		user.setPassword(passwordEncoder.encode(userRegisteredDTO.getPassword()));
 		user.setRole(role);
-		
 		return userRepo.save(user);
+	}
+	@Override
+    public User getUserByEmail(String email) {
+        return userRepo.findByEmail(email);
+    }
+
+	@Override
+	public void updateUser(User user) {
+		userRepo.save(user);
 	}
 }
